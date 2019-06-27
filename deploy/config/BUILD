@@ -9,6 +9,7 @@ go_library(
     srcs = [
         "bigquery_dataset.go",
         "binding.go",
+        "chc_dataset.go",
         "config.go",
         "default_resource.go",
         "gce_instance.go",
@@ -26,6 +27,7 @@ go_library(
     ],
     data = [
         "//deploy/config/templates",
+        "//deploy/config/templates/chc_resource:chc_dataset_files",
         "//deploy/templates",
     ],
     importpath = "github.com/GoogleCloudPlatform/healthcare/deploy/config",
@@ -40,6 +42,7 @@ go_test(
     name = "go_default_test",
     srcs = [
         "bigquery_dataset_test.go",
+        "chc_dataset_test.go",
         "default_resource_test.go",
         "gce_instance_test.go",
         "gcs_bucket_test.go",

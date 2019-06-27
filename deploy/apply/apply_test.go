@@ -504,7 +504,7 @@ func TestDeployTypeProvider(t *testing.T) {
 		got = append(got, upsertFromFileCall{name, config, projectID})
 		return nil
 	}
-	if err := deployCHCTypeProvider(&project); err != nil {
+	if err := deployPrerequisite(&project); err != nil {
 		t.Fatalf("Deploy CHC Type Provider: %v", err)
 	}
 	want := []upsertFromFileCall{
